@@ -112,5 +112,6 @@
   - Performed state audit confirming zero unresolved P0/P1 issues.
   - Committed code and pushed branch `main` to GitHub (`https://github.com/tusharkirtunia/Dr_Shankha_Shubhro_Ghosh_P1.git`).
   - Verified local build and linting status (success with 0 errors).
+  - Recorded Vercel CLI authentication blocker (`vercel login` required) preventing programmatic preview URL generation.
   - Updated documentation (`BUILD_STATE.md`, `CHANGELOG.md`).
   - Stopped after Phase P12 as requested.
