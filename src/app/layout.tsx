@@ -5,14 +5,16 @@ import "./globals.css";
 const sansFont = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const serifFont = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
-  display: "swap",
+  weight: ["400", "600", "700"],
   style: ["normal", "italic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
