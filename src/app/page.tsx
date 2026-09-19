@@ -2,14 +2,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { AboutSection } from "@/components/home/AboutSection";
-import { ServicesSection } from "@/components/home/ServicesSection";
-import { TrustFeaturesSection } from "@/components/home/TrustFeaturesSection";
-import { ExperienceTimeline } from "@/components/home/ExperienceTimeline";
-import { TeamSection } from "@/components/home/TeamSection";
+import { ResearchSection } from "@/components/home/ResearchSection";
+import { PerspectivesNewsSection } from "@/components/home/PerspectivesNewsSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { ArticlesSection } from "@/components/home/ArticlesSection";
-import { FAQSection } from "@/components/home/FAQSection";
-import { AppointmentSection } from "@/components/home/AppointmentSection";
 import { ContactSection } from "@/components/home/ContactSection";
 
 export default function Home() {
@@ -17,16 +12,16 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">
+        {/* Scroll Stage 1 — Doctor / Identity */}
         <Hero />
         <AboutSection />
-        <ServicesSection />
-        <TrustFeaturesSection />
-        <ExperienceTimeline />
-        <TeamSection />
+
+        {/* Scroll Stage 2 — Research + Professional Work */}
+        <ResearchSection />
+
+        {/* Scroll Stage 3 — Knowledge + Human Impact + Contact */}
+        <PerspectivesNewsSection />
         <TestimonialsSection />
-        <ArticlesSection />
-        <FAQSection />
-        <AppointmentSection />
         <ContactSection />
       </main>
       <Footer />

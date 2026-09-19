@@ -32,12 +32,6 @@ export function HeroDoctorVisual() {
       {/* Radiant glow circle behind clinician silhouette */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-400/20 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Decorative diagnostic scan badge in top-left */}
-      <div className="absolute top-6 left-6 z-10 flex items-center gap-2 bg-teal-950/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-teal-500/30 text-teal-200 text-xs font-medium">
-        <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-        <span>Diagnostic Imaging Focus</span>
-      </div>
-
       {/* Professional Medical Figure Vector Illustration */}
       <svg
         className="w-full h-auto max-h-[88%] object-contain relative z-10 drop-shadow-xl"

@@ -148,30 +148,6 @@ export function AboutDoctorVisual() {
         </div>
       </div>
 
-      {/* Floating Callout / Experience Style Pill (Non-numerical, neutral) */}
-      <div className="absolute -bottom-6 -right-3 sm:-bottom-8 sm:-right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-100 max-w-[220px] sm:max-w-[250px] z-20">
-        <div className="flex items-center gap-2 mb-1">
-          <svg
-            className="w-4 h-4 text-teal-700"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-            Clinical Focus
-          </span>
-        </div>
-        <p className="text-xs text-slate-600 leading-snug">
-          Specialized in comprehensive cross-sectional and plain film reporting.
-        </p>
-      </div>
     </div>
   );
 }

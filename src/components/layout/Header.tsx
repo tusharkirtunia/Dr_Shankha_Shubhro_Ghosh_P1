@@ -56,7 +56,7 @@ export function Header() {
 
   // Lightweight IntersectionObserver for active section tracking
   useEffect(() => {
-    const sectionIds = ["about", "services", "experience", "team", "testimonials", "articles", "faq", "appointment", "contact"];
+    const sectionIds = ["about", "research", "perspectives", "testimonials", "contact"];
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
@@ -132,12 +132,12 @@ export function Header() {
         <div className="flex items-center gap-3">
           <div className="hidden sm:block">
             <Button
-              href="#appointment"
+              href="#contact"
               variant="primary"
               size="md"
               className="shadow-xs hover:shadow-md transition-shadow"
             >
-              Book Appointment
+              Contact
             </Button>
           </div>
 
@@ -207,13 +207,13 @@ export function Header() {
 
             <div className="pt-4 flex flex-col gap-3">
               <Button
-                href="#appointment"
+                href="#contact"
                 variant="secondary"
                 size="lg"
                 className="w-full justify-center bg-white text-teal-900 hover:bg-teal-50"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book Appointment
+                Contact
               </Button>
             </div>
           </nav>

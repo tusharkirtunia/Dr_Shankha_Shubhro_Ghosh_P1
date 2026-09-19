@@ -1,13 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { verifiedDoctorFacts, doctorProfile } from "@/data/doctorData";
+import { getStoredProfile } from "@/lib/contentStore";
+import { DoctorProfile } from "@/types/content";
 import { navItems } from "@/data/navigation";
 
 export function Footer() {
   const [subscribed, setSubscribed] = useState(false);
+  const [profile, setProfile] = useState<DoctorProfile>(() => getStoredProfile());
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      setProfile(getStoredProfile());
+    };
+    window.addEventListener("contentStoreUpdated", handleUpdate);
+    return () => window.removeEventListener("contentStoreUpdated", handleUpdate);
+  }, []);
+
+  const name = profile?.name || "Dr. Shankha Shubhro Ghosh";
+  const profession = profile?.profession || "Radiologist";
+  const location = profile?.location || "Kolkata";
+  const shortBio = profile?.shortBio || "Providing patient-focused medical imaging interpretation and diagnostic radiology consultations.";
+  const contact = profile?.demoContact || {
+    phone: "+91 00000 00000 (Placeholder)",
+    email: "contact@example.com (Placeholder)",
+    address: "Diagnostic Center / Clinic Address, Kolkata",
+  };
+  const services = profile?.demoServices || [];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,14 +90,14 @@ export function Footer() {
             <div className="space-y-4">
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-white tracking-tight">
-                  {verifiedDoctorFacts.name}
+                  {name}
                 </span>
                 <span className="text-sm font-medium text-teal-400">
-                  {verifiedDoctorFacts.profession} • {verifiedDoctorFacts.location}
+                  {profession} • {location}
                 </span>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed">
-                {doctorProfile.shortBio}
+                {shortBio}
               </p>
             </div>
 
@@ -105,7 +126,7 @@ export function Footer() {
                 Services (Demo)
               </h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                {doctorProfile.demoServices.map((service) => (
+                {services.map((service) => (
                   <li key={service.id} className="hover:text-slate-200">
                     {service.title}
                   </li>
@@ -124,19 +145,19 @@ export function Footer() {
               <ul className="space-y-3 text-sm text-slate-400">
                 <li className="flex items-start gap-2">
                   <span className="text-teal-400 font-semibold">City:</span>
-                  <span>{verifiedDoctorFacts.location}, West Bengal</span>
+                  <span>{location}, West Bengal</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-teal-400 font-semibold">Address:</span>
-                  <span>{doctorProfile.demoContact.address}</span>
+                  <span>{contact.address}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-teal-400 font-semibold">Phone:</span>
-                  <span>{doctorProfile.demoContact.phone}</span>
+                  <span>{contact.phone}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-teal-400 font-semibold">Email:</span>
-                  <span>{doctorProfile.demoContact.email}</span>
+                  <span>{contact.email}</span>
                 </li>
               </ul>
             </div>
@@ -148,10 +169,10 @@ export function Footer() {
       <div className="border-t border-slate-800/80 py-6 text-xs text-slate-500">
         <Container className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p>
-            © {new Date().getFullYear()} {verifiedDoctorFacts.name}. All rights reserved. Prototype preview.
+            © {new Date().getFullYear()} {name}. All rights reserved. Prototype preview.
           </p>
           <p className="text-slate-400">
-            Verified Practicing Radiologist in {verifiedDoctorFacts.location}.
+            Verified Practicing Radiologist in {location}.
           </p>
         </Container>
       </div>

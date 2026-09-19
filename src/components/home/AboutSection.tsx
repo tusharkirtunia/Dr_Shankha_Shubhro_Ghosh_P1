@@ -1,18 +1,27 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AboutDoctorVisual } from "./AboutDoctorVisual";
-import { verifiedDoctorFacts, doctorProfile } from "@/data/doctorData";
+import { getStoredProfile } from "@/lib/contentStore";
+import { DoctorProfile } from "@/types/content";
 
 export function AboutSection() {
-  const specialtyPills = [
-    "Cross-Sectional Imaging (Demo)",
-    "Diagnostic Ultrasound (Demo)",
-    "Computed Tomography (Demo)",
-    "MRI Evaluation (Demo)",
-    "Plain Film Radiography (Demo)",
-    "Consultative Reporting (Demo)",
-  ];
+  const [profile, setProfile] = useState<DoctorProfile>(() => getStoredProfile());
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      setProfile(getStoredProfile());
+    };
+    window.addEventListener("contentStoreUpdated", handleUpdate);
+    return () => window.removeEventListener("contentStoreUpdated", handleUpdate);
+  }, []);
+
+  const name = profile?.name || "Dr. Shankha Shubhro Ghosh";
+  const profession = profile?.profession || "Radiologist";
+  const location = profile?.location || "Kolkata";
+  const quote = profile?.aboutQuote || "Accurate diagnostic imaging is the foundation of timely and effective medical treatment.";
 
   return (
     <section
@@ -29,14 +38,6 @@ export function AboutSection() {
 
           {/* Right Column: Editorial & Factual Profile */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6 order-1 lg:order-2">
-            {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-teal-600"></span>
-              <span className="text-xs font-semibold uppercase tracking-wider text-teal-900">
-                About The Specialist
-              </span>
-            </div>
-
             {/* Editorial Heading */}
             <h2
               id="about-heading"
@@ -51,80 +52,44 @@ export function AboutSection() {
 
             {/* Doctor Bio Lead */}
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
-              <strong className="font-semibold text-slate-900">{verifiedDoctorFacts.name}</strong> is a{" "}
-              <strong className="font-semibold text-teal-800">{verifiedDoctorFacts.profession}</strong> based in{" "}
-              <strong className="font-semibold text-slate-900">{verifiedDoctorFacts.location}</strong>, providing
+              <strong className="font-semibold text-slate-900">{name}</strong> is a{" "}
+              <strong className="font-semibold text-teal-800">{profession}</strong> based in{" "}
+              <strong className="font-semibold text-slate-900">{location}</strong>, providing
               systematic medical imaging evaluation, diagnostic accuracy, and multidisciplinary clinical consultations.
             </p>
 
             {/* Quote Callout with Colored Accent Border */}
-            <blockquote className="w-full pl-4 sm:pl-5 py-2 border-l-4 border-teal-700 bg-teal-50/40 rounded-r-xl text-slate-700 italic text-sm sm:text-base leading-relaxed">
-              &ldquo;{doctorProfile.aboutQuote}&rdquo;
+            <blockquote className="w-full pl-4 sm:pl-5 py-2 border-l-4 border-teal-700 bg-teal-50/30 text-slate-700 italic text-sm sm:text-base leading-relaxed">
+              &ldquo;{quote}&rdquo;
             </blockquote>
 
-            {/* Metadata Grid (2 Columns) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full py-2">
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex flex-col">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                  Specialist Identity
-                </span>
-                <span className="text-sm font-semibold text-slate-900 mt-0.5">
-                  {verifiedDoctorFacts.name}
-                </span>
+            {/* Editorial Key-Value List */}
+            <div className="w-full border-t border-b border-slate-200/80 divide-y divide-slate-200/60 my-2">
+              <div className="py-3 flex justify-between items-center text-sm">
+                <span className="font-medium text-slate-500">Specialist Identity</span>
+                <span className="font-semibold text-slate-900">{name}</span>
               </div>
-
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex flex-col">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                  Clinical Profession
-                </span>
-                <span className="text-sm font-semibold text-teal-800 mt-0.5">
-                  {verifiedDoctorFacts.profession}
-                </span>
+              <div className="py-3 flex justify-between items-center text-sm">
+                <span className="font-medium text-slate-500">Clinical Profession</span>
+                <span className="font-semibold text-teal-800">{profession}</span>
               </div>
-
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex flex-col">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                  Practice Location
-                </span>
-                <span className="text-sm font-semibold text-slate-900 mt-0.5">
-                  {verifiedDoctorFacts.location}, West Bengal
-                </span>
+              <div className="py-3 flex justify-between items-center text-sm">
+                <span className="font-medium text-slate-500">Practice Location</span>
+                <span className="font-semibold text-slate-900">{location}, West Bengal</span>
               </div>
-
-              <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex flex-col">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                  Diagnostic Scope
-                </span>
-                <span className="text-sm font-semibold text-slate-900 mt-0.5">
-                  Comprehensive Medical Imaging
-                </span>
-              </div>
-            </div>
-
-            {/* Specialty / Service Demo Pills */}
-            <div className="space-y-2 w-full pt-1">
-              <span className="text-xs font-semibold text-slate-600 uppercase tracking-wider block">
-                Imaging Modalities & Focus Areas (Demo)
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {specialtyPills.map((pill) => (
-                  <span
-                    key={pill}
-                    className="inline-flex items-center text-xs font-medium px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200"
-                  >
-                    {pill}
-                  </span>
-                ))}
+              <div className="py-3 flex justify-between items-center text-sm">
+                <span className="font-medium text-slate-500">Diagnostic Scope</span>
+                <span className="font-semibold text-slate-900">Comprehensive Medical Imaging</span>
               </div>
             </div>
 
             {/* Action Group */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-3 w-full sm:w-auto">
-              <Button href="#appointment" variant="primary" size="md">
-                Book Appointment
+              <Button href="#research" variant="primary" size="md">
+                View Professional Work
               </Button>
-              <Button href="#services" variant="outline" size="md">
-                View Medical Services
+              <Button href="#contact" variant="outline" size="md">
+                Research Inquiries
               </Button>
             </div>
           </div>

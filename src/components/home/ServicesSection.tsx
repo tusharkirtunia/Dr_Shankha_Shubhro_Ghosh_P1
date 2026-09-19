@@ -16,10 +16,10 @@ export function ServicesSection() {
         {/* Section Header */}
         <SectionHeading
           id="services-heading"
-          badge="Diagnostic Modalities"
-          title="Specialized Radiological"
-          accentWord="Services"
-          subtitle="Structured medical imaging interpretations and consultative radiology workflows designed for clinical precision in Kolkata (Prototype Demo Categories)."
+          badge="Professional Scope & Research"
+          title="Diagnostic Radiology &"
+          accentWord="Research Scope"
+          subtitle="Advanced diagnostic imaging interpretations, consultative radiology workflows, and clinical research methodologies conducted in Kolkata."
           align="center"
           className="mb-12 sm:mb-16"
         />
@@ -35,32 +35,32 @@ export function ServicesSection() {
         <div className="mt-12 sm:mt-16 p-8 sm:p-10 rounded-2xl bg-gradient-to-r from-teal-900 to-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="text-center md:text-left max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-wider text-teal-300">
-              Need A Clinical Consultation?
+              Collaborative Inquiries
             </span>
             <h3 className="text-xl sm:text-2xl font-bold mt-1 text-white">
-              Schedule An Imaging Review Or Case Discussion
+              Professional Consultations & Research Discussions
             </h3>
             <p className="text-sm text-slate-300 mt-2">
-              Book a patient diagnostic consultation or discuss medical imaging findings directly with Dr. Shankha Shubhro Ghosh.
+              Connect to discuss diagnostic imaging research, professional case consultations, or academic collaborations with Dr. Shankha Shubhro Ghosh.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
             <Button
-              href="#appointment"
+              href="#contact"
               variant="secondary"
               size="lg"
               className="w-full sm:w-auto bg-teal-50 text-teal-950 hover:bg-white"
             >
-              Book Appointment
+              Contact & Inquiries
             </Button>
             <Button
-              href="#contact"
+              href="#articles"
               variant="outline"
               size="lg"
               className="w-full sm:w-auto text-white border-teal-600 hover:bg-teal-800/50 hover:text-white"
             >
-              Contact Clinic
+              View Knowledge
             </Button>
           </div>
         </div>

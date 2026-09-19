@@ -52,12 +52,12 @@ export function Hero() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2 w-full sm:w-auto">
               <Button
-                href="#appointment"
+                href="#contact"
                 variant="primary"
                 size="lg"
                 className="w-full sm:w-auto text-center"
               >
-                Book Appointment
+                Research Inquiries
               </Button>
 
               <Button
@@ -134,44 +134,10 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Doctor Visual & Floating Cards */}
+          {/* Right Column: Doctor Visual */}
           <div className="lg:col-span-5 relative flex justify-center mt-6 lg:mt-0">
-            {/* Main Visual */}
-            <div className="relative w-full max-w-sm sm:max-w-md">
+            <div className="w-full max-w-sm sm:max-w-md">
               <HeroDoctorVisual />
-
-              {/* Floating Card: Availability / Consultation Inquiry (Demo Pattern) */}
-              <div className="absolute -top-4 -right-2 sm:-top-6 sm:-right-6 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-xl border border-slate-100 max-w-[210px] sm:max-w-[240px] z-30 transition-transform duration-300 hover:scale-105">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                  </span>
-                  <span className="text-xs font-bold text-slate-900 tracking-tight">
-                    Inquiry Preview (Demo)
-                  </span>
-                </div>
-                <p className="text-xs text-slate-600 leading-snug">
-                  Diagnostic imaging reviews & patient consultations in Kolkata.
-                </p>
-              </div>
-
-              {/* Floating Card: Diagnostic Trust Badge */}
-              <div className="absolute -bottom-4 -left-2 sm:-bottom-6 sm:-left-6 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-xl border border-slate-100 max-w-[200px] sm:max-w-[220px] z-30 transition-transform duration-300 hover:scale-105">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-xs shrink-0">
-                    DR
-                  </div>
-                  <div>
-                    <span className="block text-xs font-bold text-slate-900">
-                      Radiology Care
-                    </span>
-                    <span className="block text-[11px] text-teal-700 font-medium">
-                      Kolkata Practice
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

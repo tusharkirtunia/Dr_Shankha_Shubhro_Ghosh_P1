@@ -77,6 +77,90 @@ export const doctorProfile: DoctorProfile = {
     },
   ],
 
+  demoArticles: [
+    {
+      id: "article-1",
+      title: "Understanding Diagnostic Imaging: A Patient Guide",
+      category: "Patient Education",
+      date: "Demo Date • 2026",
+      readTime: "4 min read",
+      summary:
+        "An overview of common medical imaging modalities—such as CT, MRI, and Ultrasound—and how they help physicians pinpoint diagnoses accurately.",
+    },
+    {
+      id: "article-2",
+      title: "How to Prepare for a Medical Imaging Scan",
+      category: "Clinical Preparation",
+      date: "Demo Date • 2026",
+      readTime: "5 min read",
+      summary:
+        "Essential patient guidelines regarding fasting, prior medical records, and clothing when attending diagnostic radiological examinations.",
+    },
+    {
+      id: "article-3",
+      title: "The Importance of Second-Opinion Imaging Reviews",
+      category: "Diagnostic Insights",
+      date: "Demo Date • 2026",
+      readTime: "3 min read",
+      summary:
+        "Why expert radiological secondary reviews provide peace of mind and clarity for complex diagnostic cases and surgical planning.",
+    },
+  ],
+
+  demoTeam: [
+    {
+      id: "team-1",
+      name: "Demo Specialist A",
+      role: "Diagnostic Imaging Associate",
+      specialty: "Cross-Sectional CT/MRI (Demo)",
+      avatarColor: "from-teal-800 to-teal-950",
+    },
+    {
+      id: "team-2",
+      name: "Demo Specialist B",
+      role: "Ultrasonography Associate",
+      specialty: "Diagnostic Ultrasound (Demo)",
+      avatarColor: "from-slate-800 to-slate-950",
+    },
+    {
+      id: "team-3",
+      name: "Demo Specialist C",
+      role: "Clinical Radiology Fellow",
+      specialty: "Radiographic Review (Demo)",
+      avatarColor: "from-teal-900 to-slate-900",
+    },
+  ],
+
+  demoTestimonials: [
+    {
+      id: "test-demo-1",
+      author: "Demo Patient A",
+      location: "Kolkata",
+      role: "Diagnostic Imaging Patient",
+      rating: 5,
+      content:
+        "The diagnostic review was conducted with clarity and efficiency. The findings were documented in a structured report that my treating physician found very helpful. (Demo Feedback)",
+    },
+    {
+      id: "test-demo-2",
+      author: "Referring Physician (Demo)",
+      location: "Kolkata",
+      role: "Consultant Physician",
+      rating: 5,
+      content:
+        "Dr. Ghosh provides clear, timely, and detailed radiological impressions that significantly support our clinical decision-making. (Demo Feedback)",
+    },
+    {
+      id: "test-demo-3",
+      author: "Demo Patient B",
+      location: "West Bengal",
+      role: "Ultrasound & CT Review",
+      rating: 5,
+      content:
+        "Professional and prompt diagnostic consultation. Clear communication regarding what the imaging procedures entailed. (Demo Feedback)",
+    },
+  ],
+
   demoFeatures: [
     {
       id: "precision-imaging",
@@ -135,90 +219,6 @@ export const doctorProfile: DoctorProfile = {
     },
   ],
 
-  demoTeam: [
-    {
-      id: "team-1",
-      name: "Demo Specialist A",
-      role: "Diagnostic Imaging Associate",
-      specialty: "Cross-Sectional CT/MRI (Demo)",
-      avatarColor: "from-teal-800 to-teal-950",
-    },
-    {
-      id: "team-2",
-      name: "Demo Specialist B",
-      role: "Ultrasonography Associate",
-      specialty: "Diagnostic Ultrasound (Demo)",
-      avatarColor: "from-slate-800 to-slate-950",
-    },
-    {
-      id: "team-3",
-      name: "Demo Specialist C",
-      role: "Clinical Radiology Fellow",
-      specialty: "Radiographic Review (Demo)",
-      avatarColor: "from-teal-900 to-slate-900",
-    },
-  ],
-
-  demoTestimonials: [
-    {
-      id: "test-1",
-      author: "Demo Patient A",
-      location: "Kolkata",
-      role: "Diagnostic Imaging Patient",
-      rating: 5,
-      content:
-        "The diagnostic review was conducted with clarity and efficiency. The findings were documented in a structured report that my treating physician found very helpful. (Demo Feedback)",
-    },
-    {
-      id: "test-2",
-      author: "Referring Physician (Demo)",
-      location: "Kolkata",
-      role: "Consultant Physician",
-      rating: 5,
-      content:
-        "Dr. Ghosh provides clear, timely, and detailed radiological impressions that significantly support our clinical decision-making. (Demo Feedback)",
-    },
-    {
-      id: "test-3",
-      author: "Demo Patient B",
-      location: "West Bengal",
-      role: "Ultrasound & CT Review",
-      rating: 5,
-      content:
-        "Professional and prompt diagnostic consultation. Clear communication regarding what the imaging procedures entailed. (Demo Feedback)",
-    },
-  ],
-
-  demoArticles: [
-    {
-      id: "article-1",
-      title: "Understanding Diagnostic Imaging: A Patient Guide",
-      category: "Patient Education",
-      date: "Demo Date • 2026",
-      readTime: "4 min read",
-      summary:
-        "An overview of common medical imaging modalities—such as CT, MRI, and Ultrasound—and how they help physicians pinpoint diagnoses accurately.",
-    },
-    {
-      id: "article-2",
-      title: "How to Prepare for a Medical Imaging Scan",
-      category: "Clinical Preparation",
-      date: "Demo Date • 2026",
-      readTime: "5 min read",
-      summary:
-        "Essential patient guidelines regarding fasting, prior medical records, and clothing when attending diagnostic radiological examinations.",
-    },
-    {
-      id: "article-3",
-      title: "The Importance of Second-Opinion Imaging Reviews",
-      category: "Diagnostic Insights",
-      date: "Demo Date • 2026",
-      readTime: "3 min read",
-      summary:
-        "Why expert radiological secondary reviews provide peace of mind and clarity for complex diagnostic cases and surgical planning.",
-    },
-  ],
-
   demoFAQs: [
     {
       id: "faq-1",
@@ -251,4 +251,133 @@ export const doctorProfile: DoctorProfile = {
     email: "contact@example.com (Placeholder)",
     address: "Diagnostic Center / Clinic Address, Kolkata",
   },
+
+  research: [
+    {
+      id: "res-1",
+      title: "Standardized Reporting Metrics in Cross-Sectional CT & MRI: A Retrospective Evaluation (Demo)",
+      authors: ["Dr. Shankha Shubhro Ghosh", "Department Research Group (Demo)"],
+      journal: "Journal of Clinical Radiology & Diagnostic Imaging (Demo)",
+      date: "2025 (Demo)",
+      abstract: "An evaluation of structured diagnostic reporting frameworks in cross-sectional CT and MRI examinations to enhance clarity for referring physicians. (Demo Placeholder Content)",
+      researchArea: "Cross-Sectional Imaging & Reporting Standards",
+      doi: "10.1000/demo.doi.2025.01",
+      externalUrl: "#",
+      pdfUrl: "#",
+      status: "Published (Demo)",
+    },
+    {
+      id: "res-2",
+      title: "Optimizing Diagnostic Protocols in Non-Invasive Ultrasonography (Demo)",
+      authors: ["Dr. Shankha Shubhro Ghosh"],
+      journal: "Indian Radiological Review (Demo)",
+      date: "2024 (Demo)",
+      abstract: "Examining workflow efficiencies and scan protocol standards in high-resolution ultrasound imaging across regional clinical settings. (Demo Placeholder Content)",
+      researchArea: "Ultrasonography Methodology",
+      doi: "10.1000/demo.doi.2024.02",
+      externalUrl: "#",
+      pdfUrl: "#",
+      status: "Published (Demo)",
+    },
+    {
+      id: "res-3",
+      title: "Collaborative Tele-Radiology Consultations in Regional Healthcare (Demo)",
+      authors: ["Dr. Shankha Shubhro Ghosh", "Clinical Informatics Team (Demo)"],
+      journal: "Medical Imaging Practice Forum (Demo)",
+      date: "2026 (Demo)",
+      abstract: "Exploring secure consultative channels for secondary opinion imaging reviews between diagnostic centers and regional practitioners. (Demo Placeholder Content)",
+      researchArea: "Clinical Consultation & Tele-Radiology",
+      doi: "10.1000/demo.doi.2026.03",
+      externalUrl: "#",
+      pdfUrl: "#",
+      status: "In Review (Demo)",
+    },
+  ],
+
+  perspectives: [
+    {
+      id: "persp-1",
+      title: "The Critical Role of Clarity in Radiology Reporting (Demo)",
+      excerpt: "Why structured impressions and unambiguous terminology are vital when communicating complex scan findings to treating physicians.",
+      body: "In diagnostic radiology, the final report is the primary bridge between raw imaging data and clinical patient care. When reporting cross-sectional scans such as CT or MRI, avoiding ambiguous terminology ensures that referring physicians can immediately assess key findings. This editorial perspective explores best practices in structuring radiology reports for maximum clinical utility. (Demo Perspective)",
+      category: "Clinical Communication",
+      tags: ["Radiology", "Reporting", "Clinical Practice"],
+      publicationDate: "February 2026",
+      status: "published",
+    },
+    {
+      id: "persp-2",
+      title: "Preparing Patients for Advanced Diagnostic Imaging (Demo)",
+      excerpt: "Bridging the information gap so patients feel informed and comfortable before undergoing CT, MRI, or ultrasound examinations.",
+      body: "Medical imaging procedures can often cause apprehension for patients unfamiliar with scanner environments. Clear pre-scan preparation guidelines—covering fasting protocols, metallic safety checklists, and scan duration expectations—significantly improve patient comfort and scan quality. (Demo Perspective)",
+      category: "Patient Care",
+      tags: ["Patient Education", "Diagnostic Prep", "Care Standards"],
+      publicationDate: "January 2026",
+      status: "published",
+    },
+    {
+      id: "persp-3",
+      title: "Unpublished Draft Note on Advanced AI Assistive Tools (Draft Demo)",
+      excerpt: "Draft notes on emerging computational aids in radiology workflow management.",
+      body: "This is a draft perspective note regarding future assistive technologies in radiology workflows. (Demo Draft - Not Publicly Exposed)",
+      category: "Technology",
+      tags: ["AI", "Workflow"],
+      publicationDate: "March 2026",
+      status: "draft",
+    },
+  ],
+
+  domainNews: [
+    {
+      id: "news-1",
+      title: "Global Updates in Radiation Safety and Protocol Standardization (Demo Source)",
+      summary: "International radiological bodies release updated guidelines focusing on dose optimization and patient safety metrics in routine CT imaging.",
+      source: "International Radiological Bulletin (Demo Source)",
+      sourceUrl: "#",
+      date: "March 2026",
+      category: "Radiology Standards",
+      status: "External News",
+    },
+    {
+      id: "news-2",
+      title: "Advancements in High-Resolution MRI Sequences for Neurological Review (Demo Source)",
+      summary: "Recent technological briefings highlight improvements in sequence acquisition times and structural resolution for soft-tissue diagnostics.",
+      source: "Medical Imaging Association Journal (Demo Source)",
+      sourceUrl: "#",
+      date: "February 2026",
+      category: "Imaging Technology",
+      status: "External News",
+    },
+  ],
+
+  testimonials: [
+    {
+      id: "test-1",
+      text: "Dr. Ghosh's radiological reports are exceptionally structured and rigorous. The clarity of findings consistently supports our surgical and medical decision-making in clinical practice.",
+      attribution: "Referring Clinician, Kolkata Medical Center (Demo Attribution)",
+      status: "published",
+    },
+    {
+      id: "test-2",
+      text: "Professional and methodical approach to diagnostic scan interpretations. The emphasis on clear communication and protocol adherence represents high professional standards.",
+      attribution: "Colleague Radiologist, Academic Department (Demo Attribution)",
+      status: "published",
+    },
+    {
+      id: "test-3",
+      text: "Rigorous attention to detail during second-opinion imaging reviews provides vital peace of mind and clarity for complex diagnostic cases.",
+      attribution: "Clinical Colleague & Referring Practitioner (Demo Attribution)",
+      status: "published",
+    },
+  ],
+
+  mediaAssets: [
+    {
+      id: "media-1",
+      type: "icon",
+      url: "#",
+      alt: "Diagnostic Modality Icon Placeholder",
+      caption: "Placeholder asset for imaging modality representation.",
+    },
+  ],
 };

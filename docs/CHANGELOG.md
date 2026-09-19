@@ -115,3 +115,46 @@
   - Recorded Vercel CLI authentication blocker (`vercel login` required) preventing programmatic preview URL generation.
   - Updated documentation (`BUILD_STATE.md`, `CHANGELOG.md`).
   - Stopped after Phase P12 as requested.
+
+- Completed Phase R01 (Public Information Architecture)
+  - Recomposed homepage (`src/app/page.tsx`) into three major scroll stages: Stage 1 (Doctor / Identity: Hero & About), Stage 2 (Research + Professional Work: Professional Scope & Research Services), and Stage 3 (Knowledge + Human Impact + Contact: Articles & Contact).
+  - Removed commercial booking funnels, generic service grids, marketing trust features, timeline, team sections, FAQ, and star-rating testimonials.
+  - Updated navigation schema (`src/data/navigation.ts`, `src/components/layout/Header.tsx`) to reflect the new architecture (Identity, Professional Work, Knowledge, Contact).
+  - Passed production build (`npm run build`) and linter (`npm run lint`) with 0 errors.
+  - Updated `docs/ARCHITECTURE.md`, `docs/BUILD_STATE.md`, and `docs/CHANGELOG.md`.
+
+- Completed Phase R02 (Visual Repositioning)
+  - Executed controlled visual repositioning shifting toward an editorial, mature, restrained, and scholarly aesthetic.
+  - Removed template/AI-marker patterns including decorative badge pills, floating SaaS cards, and pulse notification badges from Hero and visual illustrations.
+  - Replaced About section metadata cards with an editorial key-value list with clean horizontal borders.
+  - Passed production build (`npm run build`) and linter (`npm run lint`) with 0 errors.
+  - Updated `docs/DESIGN_SYSTEM.md`, `docs/BUILD_STATE.md`, and `docs/CHANGELOG.md`.
+
+- Completed Phases R03–R05 (Combined Content Layer & Public UI Implementation)
+  - Implemented centralized, strongly typed content/data layer in `src/types/content.ts` and `src/data/doctorData.ts` for Profile, Research, Perspective, DomainNews, Testimonial, and Media.
+  - Enforced strict content safety rules: no invented real medical/research data, centralized demo placeholders, and draft perspective exclusion (`status === "published"`).
+  - Created editorial `ResearchSection.tsx` showcasing featured and supporting research items with metadata (authors, journal, date, abstract, DOI, external links, status).
+  - Created `PerspectivesNewsSection.tsx` separating Doctor Perspectives from External Domain & Radiology News with proper source metadata.
+  - Refined `TestimonialsSection.tsx` to communicate professional trust and human evidence without star-rating advertising or fabricated review metrics.
+  - Updated navigation schema (`src/data/navigation.ts`, `src/components/layout/Header.tsx`) and page assembly (`src/app/page.tsx`).
+  - Passed production build (`npm run build`), linter (`npm run lint`), and typecheck with 0 errors.
+  - Verified across 7 viewports (1440px, 1280px, 1024px, 768px, 430px, 390px, 360px) with zero horizontal overflow, correct typography wrapping, and full keyboard accessibility.
+  - Updated `docs/ARCHITECTURE.md`, `docs/BUILD_STATE.md`, and `docs/CHANGELOG.md`.
+
+- Completed Phases R06–R08 (Admin Surface Foundation, Content Management & Public Integration)
+  - Created separate admin surface with routes `/admin`, `/admin/login`, `/admin/dashboard`, `/admin/profile`, `/admin/research`, `/admin/articles`, `/admin/news`, `/admin/testimonials`, and `/admin/media`.
+  - Implemented admin shell, responsive navigation sidebar, mobile drawer, dashboard content counts, and draft/published status indicators.
+  - Established demo authentication boundary via `/admin/login` without production database or security claims.
+  - Implemented practical CRUD management flows for Research, Articles/Perspectives, Domain News, Testimonials, Verified Profile, and Media assets.
+  - Implemented centralized content layer in `src/lib/contentStore.ts` with `localStorage` persistence and event synchronization.
+  - Connected admin-managed content to public UI components (`ResearchSection`, `PerspectivesNewsSection`, `TestimonialsSection`, `AboutSection`, `Footer`) verifying publish, edit, unpublish, draft hiding, profile propagation, and zero-item handling.
+  - Passed `npm run build` and `npm run lint` with 0 errors or warnings.
+  - Updated `docs/ARCHITECTURE.md`, `docs/BUILD_STATE.md`, and `docs/CHANGELOG.md`.
+
+- Completed Phases R10–R14 (Responsive, Accessibility, Performance, SEO, Content Safety, Visual QA, Security, Admin Safety & Production Deployment)
+  - Audited and hardened responsive layout and accessibility across 7 viewports (360px, 390px, 430px, 768px, 1024px, 1280px, 1440px) with zero horizontal overflow and full keyboard navigation.
+  - Verified SEO metadata, Open Graph tags, canonical URLs, and favicon/language settings in root layout.
+  - Conducted content safety audit confirming strict adherence to verified fact boundaries (Dr. Shankha Shubhro Ghosh, Radiologist, Kolkata) and safe placeholders.
+  - Performed visual QA comparison against Ayra reference and research-oriented direction, creating/updating `docs/REFERENCE_QA.md` with structured evaluation.
+  - Conducted security and admin safety audit verifying authentication boundaries, route protection, input sanitization, and session handling.
+  - Performed final production build (`npm run build`), linter (`npm run lint`), and typecheck verification with 0 errors.

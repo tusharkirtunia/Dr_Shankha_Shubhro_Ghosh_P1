@@ -78,10 +78,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
       {/* Footer Link / CTA */}
       <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
         <Link
-          href="#appointment"
+          href="#contact"
           className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-teal-800 hover:text-teal-950 group-hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 rounded py-1"
         >
-          <span>Schedule Review</span>
+          <span>Inquire / Consult</span>
           <svg
             className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
             fill="none"

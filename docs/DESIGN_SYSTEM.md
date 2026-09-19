@@ -116,8 +116,8 @@ Centralized in `src/app/globals.css` via `@theme` definitions:
 
 ---
 
-## 5. Planned for Later Phases (P06+)
-
-- **P06**: Appointment interface banner & contact inquiry form with client-side state handling.
-- **P07**: Motion transitions, reveal animations, scroll effects.
-- **P08**: Full responsive visual audit and breakpoint tuning.
+## 6. Phase R02 Visual Repositioning Adjustments
+- **Reduced Pill Usage**: Removed decorative top badge pills and redundant keyword demo pills across Hero and About sections to eliminate template-like aesthetics.
+- **Restrained Editorial Hierarchy**: Replaced generic card grid containers for About metadata with an editorial key-value list featuring clean horizontal borders (`border-t border-b`).
+- **Removed Floating Artifacts**: Removed floating SaaS-style notification cards and pulse badges from Hero and visual illustrations, establishing a calmer, more authoritative scholarly tone.
+- **Calm CTA Hierarchy**: Transitioned from aggressive commercial appointment conversion CTAs to restrained professional research and contact inquiries.
